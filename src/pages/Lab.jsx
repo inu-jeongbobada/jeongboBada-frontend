@@ -46,7 +46,7 @@ function Lab() {
         </button>
 
         <div className={styles.labInfo}>
-          <h1 className={styles.labName}>연구실 이름 넣어주세요</h1>
+          <h1 className={styles.labName}>연구실 이름</h1>
           <div className={styles.labDescription}>
             <p>연구실 설명</p>
             <p>연구실 URL</p>

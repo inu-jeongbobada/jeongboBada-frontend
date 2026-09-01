@@ -1,19 +1,14 @@
 .header {
   height: 70px;
-
   display: flex;
   align-items: center;
-
   padding: 0 7%;
-
   background: #d9d9d9;
 }
 
 .logo {
-  width: 36px;
-  height: 36px;
-
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-
   background: #dab8ff;
 }
