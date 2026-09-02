@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Lab.module.css";
+import Header from "../components/Header";
 
 function Lab() {
   const navigate = useNavigate();
@@ -32,10 +33,7 @@ function Lab() {
 
   return (
     <div className={styles.page}>
-      {/* Todo: 컴포넌트 Header로 바꾸기 */}
-      <header className={styles.header}>
-        <div className={styles.logo} />
-      </header>
+      <Header />
       <section
         className={menu ? `${styles.hero} ${styles.heroSelected}` : styles.hero}
       >
@@ -48,7 +46,7 @@ function Lab() {
         </button>
 
         <div className={styles.labInfo}>
-          <h1 className={styles.labName}>연구실 이름 넣어주세요</h1>
+          <h1 className={styles.labName}>연구실 이름</h1>
           <div className={styles.labDescription}>
             <p>연구실 설명</p>
             <p>연구실 URL</p>
