@@ -32,6 +32,10 @@
   text-decoration: none;
 }
 
+.nav .active {
+  font-weight: 700;
+}
+
 .nav a:hover {
   font-weight: 700;
 }
