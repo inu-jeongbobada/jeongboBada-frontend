@@ -14,26 +14,10 @@
   padding: 100px 8% 40px;
 }
 
-.backButton {
+.backButtonPosition {
   position: absolute;
-  top: 25px;
-  left: 7%;
-  width: 65px;
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.backButton:hover {
-  background: rgba(255, 255, 255, 0.3);
+  top: 32px;
+  left: 72px;
 }
 
 .labInfo {
@@ -198,7 +182,6 @@
 }
 
 .detailHeader span {
-  hight: 40px;
   width: 248px;
   padding: 8px 15px;
   border: 1px solid rgba(255, 255, 255, 0.5);

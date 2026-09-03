@@ -1,0 +1,188 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.content {
+  width: 100%;
+  padding: 75px 45px 40px;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 100px 0 0;
+  color: #233f91;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.searchBox {
+  width: 560px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  margin: 50px auto 56px;
+  padding: 0 10px 0 18px;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.13);
+  box-sizing: border-box;
+}
+
+.searchInput {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #233f91;
+  font-size: 14px;
+}
+
+.searchButton {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #526cff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.professorArea {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.filterList {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 48px;
+}
+
+.filterButton {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #526cff;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.activeFilter {
+  background: #526cff;
+  color: #ffffff;
+}
+
+.professorGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  column-gap: 45px;
+  row-gap: 45px;
+}
+
+.professorCard {
+  width: 100%;
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13px 16px 10px;
+  border: none;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.23);
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.professorCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.27);
+}
+
+.professorImage {
+  width: 108px;
+  height: 108px;
+  flex-shrink: 0;
+  margin-bottom: 6px;
+  border-radius: 50%;
+  background: #c4ef9c;
+}
+
+.professorCard h2 {
+  margin: 0;
+  color: #233f91;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.department {
+  margin: 2px 0 10px;
+  color: #526cff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.subjectList {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.subjectList span {
+  padding: 4px 9px;
+  border-radius: 12px;
+  background: #aeb9ff;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.cardBottom {
+  width: 100%;
+  display: flex;
+  gap: 96px;
+  justify-content: center;
+  margin-top: 12px;
+  color: #526cff;
+  font-size: 12px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0 20px;
+}
+
+.footerLogo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  background: #d8baff;
+}
+
+.footer p {
+  margin: 0;
+  color: #777777;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
