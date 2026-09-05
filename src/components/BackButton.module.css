@@ -5,13 +5,26 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
   cursor: pointer;
 }
 
-.backButton:hover {
+.white {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.white:hover {
   background: rgba(255, 255, 255, 0.3);
+}
+
+.blue {
+  border: none;
+  background: #ffffff;
+  color: #526cff;
+}
+
+.blue:hover {
+  background: #f2f4ff;
 }
