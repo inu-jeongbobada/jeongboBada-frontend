@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Header from "../components/Header";
-import BackButton from "../components/BackButton";
 import styles from "./Course.module.css";
 import logoImg from "../assets/logo.png";
 
@@ -12,9 +11,6 @@ function Course() {
       <Header />
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <div className={styles.backButtonPosition}>
-            <BackButton variant="blue" />
-          </div>
           <h1 className={styles.heroTitle}>
             쉽고 빠르게 <span>전공 강의평</span>
             <br />
