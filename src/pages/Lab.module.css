@@ -14,12 +14,6 @@
   padding: 100px 8% 40px;
 }
 
-.backButtonPosition {
-  position: absolute;
-  top: 32px;
-  left: 72px;
-}
-
 .labInfo {
   position: absolute;
   left: 96px;

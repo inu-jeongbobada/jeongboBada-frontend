@@ -28,7 +28,7 @@ function Header() {
           교수님 정보
         </NavLink>
         <NavLink
-          to="/lecture"
+          to="/course"
           className={({ isActive }) => (isActive ? styles.active : "")}
         >
           전공 강의평

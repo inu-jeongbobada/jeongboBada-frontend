@@ -1,5 +1,4 @@
 import Header from "../components/Header";
-import BackButton from "../components/BackButton";
 import styles from "./ProfessorDetail.module.css";
 
 function ProfessorDetail() {
@@ -8,12 +7,7 @@ function ProfessorDetail() {
       <Header />
       <main className={styles.content}>
         <section className={styles.profile}>
-          <div className={styles.profileImage}>
-            <div className={styles.backButtonPosition}>
-              <BackButton />
-            </div>
-          </div>
-
+          <div className={styles.profileImage}></div>
           <div className={styles.profileInfo}>
             <h1>교수명</h1>
             <h3>학부명</h3>

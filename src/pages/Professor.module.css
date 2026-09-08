@@ -59,30 +59,7 @@
 
 .professorArea {
   width: fit-content;
-  margin: 0 auto;
-}
-
-.filterList {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-  margin-bottom: 48px;
-}
-
-.filterButton {
-  padding: 7px 14px;
-  border: none;
-  border-radius: 24px;
-  background: #ffffff;
-  color: #526cff;
-  font-size: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-}
-
-.activeFilter {
-  background: #526cff;
-  color: #ffffff;
+  margin: 136px auto 0;
 }
 
 .professorGrid {
@@ -140,27 +117,14 @@
   font-weight: 600;
 }
 
-.subjectList {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-
-.subjectList span {
-  padding: 4px 9px;
-  border-radius: 12px;
-  background: #aeb9ff;
-  color: #ffffff;
-  font-size: 12px;
-}
-
 .cardBottom {
   width: 100%;
   display: flex;
-  gap: 96px;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 12px;
-  color: #526cff;
+  gap: 8px;
+  margin-top: 6px;
+  color: #6f6c6c;
   font-size: 12px;
 }
 

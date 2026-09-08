@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Lab from "../pages/Lab";
 import Professor from "../pages/Professor";
 import ProfessorDetail from "../pages/ProfessorDetail";
+import Course from "../pages/Course";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/lab" element={<Lab />} />
       <Route path="/professor" element={<Professor />} />
       <Route path="/professor/:id" element={<ProfessorDetail />} />
+      <Route path="/course" element={<Course />} />
     </Routes>
   );
 }

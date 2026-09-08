@@ -184,44 +184,6 @@ function Professor() {
         </div>
 
         <div className={styles.professorArea}>
-          <div className={styles.filterList}>
-            <button
-              type="button"
-              className={
-                filter === "all"
-                  ? `${styles.filterButton} ${styles.activeFilter}`
-                  : styles.filterButton
-              }
-              onClick={() => setFilter("all")}
-            >
-              전체
-            </button>
-
-            <button
-              type="button"
-              className={
-                filter === "department"
-                  ? `${styles.filterButton} ${styles.activeFilter}`
-                  : styles.filterButton
-              }
-              onClick={() => setFilter("department")}
-            >
-              학과별
-            </button>
-
-            <button
-              type="button"
-              className={
-                filter === "subject"
-                  ? `${styles.filterButton} ${styles.activeFilter}`
-                  : styles.filterButton
-              }
-              onClick={() => setFilter("subject")}
-            >
-              담당과목별
-            </button>
-          </div>
-
           <div className={styles.professorGrid}>
             {professors.map((professor) => (
               <button
@@ -233,10 +195,6 @@ function Professor() {
                 <div className={styles.professorImage} />
                 <h2>{professor.name}</h2>
                 <p className={styles.department}>{professor.department}</p>
-                <div className={styles.subjectList}>
-                  <span>{professor.subject1}</span>
-                  <span>{professor.subject2}</span>
-                </div>
                 <div className={styles.cardBottom}>
                   <span>{professor.location}</span>
                   <span>{professor.phone}</span>

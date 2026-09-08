@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Lab.module.css";
 import Header from "../components/Header";
-import BackButton from "../components/BackButton";
 
 function Lab() {
   const navigate = useNavigate();
@@ -38,10 +37,6 @@ function Lab() {
       <section
         className={menu ? `${styles.hero} ${styles.heroSelected}` : styles.hero}
       >
-        <div className={styles.backButtonPosition}>
-          <BackButton onClick={handleBack} />
-        </div>
-
         <div className={styles.labInfo}>
           <h1 className={styles.labName}>연구실 이름</h1>
           <div className={styles.labDescription}>
