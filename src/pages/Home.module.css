@@ -1,0 +1,336 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.hero {
+  width: 100%;
+  height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/home-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroContent {
+  text-align: center;
+}
+
+.heroContent h1 {
+  margin: 0;
+  color: #0c174f;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.heroSubTitle {
+  margin: 24px 0 0;
+  color: rgb(12, 23, 79, 0.7);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.heroDescription {
+  margin: 112px 0 56px;
+  color: #14295e;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.diveButton {
+  width: 240px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  border-radius: 32px;
+  background: #4563ff;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.diveButton:hover {
+  transform: translateY(-2px);
+}
+
+.container {
+  width: 86%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shortcutSection {
+  padding: 45px 0 80px;
+  background: #ffffff;
+}
+
+.shortcutTitle {
+  margin-bottom: 56px;
+}
+
+.shortcutTitle h2 {
+  margin: 0 0 6px;
+  color: #172346;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.shortcutTitle p {
+  margin: 0;
+  color: #000000;
+  font-size: 16px;
+}
+
+.shortcutList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+}
+
+.shortcutCard {
+  position: relative;
+  width: 264px;
+  height: 296px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 24px;
+  overflow: hidden;
+  border: none;
+  border-radius: 17px;
+  background: #526cff;
+  color: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.shortcutCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(82, 108, 255, 0.25);
+}
+
+.externalIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #91a1ff;
+}
+
+.cardIcon {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.labIcon {
+  width: 184px;
+  height: 232px;
+  bottom: 48px;
+  left: 20px;
+}
+
+.professorIcon {
+  width: 200px;
+  height: 232px;
+  bottom: 32px;
+  left: 24px;
+  color: rgba(25, 52, 153, 0.6);
+}
+
+.lectureIcon {
+  width: 200px;
+  height: 200px;
+  top: 40px;
+  left: 16px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.gradeIcon {
+  position: absolute;
+  top: 32px;
+  left: 25px;
+  width: 160px;
+  height: 150px;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1;
+}
+
+.gradeFour {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.gradeThree {
+  position: absolute;
+  top: 88px;
+  left: 32px;
+  font-size: 128px;
+  font-weight: 700;
+}
+
+.shortcutText {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.shortcutText span {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.noticeSection {
+  padding: 50px 112px 56px 88px;
+  background: #f3f5ff;
+}
+
+.noticeTitle {
+  margin-bottom: 35px;
+}
+
+.noticeTitle h2 {
+  margin: 0 0 8px;
+  color: #000000;
+  font-size: 32px;
+}
+
+.noticeTitle h2 span {
+  color: #4564fa;
+  font-size: 48px;
+}
+
+.noticeTitle p {
+  color: rgb(0, 0, 0, 0.8);
+  font-size: 16px;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sliderButton {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgb(69, 99, 255, 0.5);
+  cursor: pointer;
+}
+
+.noticeList {
+  flex: 1;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 324px);
+  gap: 56px;
+}
+
+.noticeCard {
+  position: relative;
+  height: 256px;
+  margin: 48px 0;
+  padding: 24px 24px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+
+.noticeCard h3 {
+  margin: 0 0 24px;
+  color: #4564fa;
+  font-size: 20px;
+}
+
+.noticeCard p {
+  margin: 0;
+  color: #6f6c6c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.noticeText span {
+  display: block;
+  margin-top: 72px;
+  color: #9d9d9d;
+  font-size: 14px;
+}
+
+.noticeIcon {
+  position: absolute;
+  right: 28px;
+  bottom: 16px;
+  color: #4564fa;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 45px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgb(161, 177, 255, 0.41);
+  cursor: pointer;
+}
+
+.activeDot {
+  background: #4564fa;
+}
+
+.footer {
+  margin-top: 120px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.footerLogo {
+  width: 86px;
+  height: 86px;
+  margin-bottom: 36px;
+  border-radius: 50%;
+  background: #d8baff;
+}
+
+.footer p {
+  margin: 0;
+  color: #777777;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+}

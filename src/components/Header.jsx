@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { Search, UserRound, Menu } from "lucide-react";
+import { Search, UserRound, Lock } from "lucide-react";
 import styles from "./Header.module.css";
 import logoImg from "../assets/logo.png";
 
@@ -15,6 +15,12 @@ function Header() {
       />
 
       <nav className={styles.nav}>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? styles.active : "")}
+        >
+          홈
+        </NavLink>
         <NavLink
           to="/lab"
           className={({ isActive }) => (isActive ? styles.active : "")}
@@ -33,25 +39,18 @@ function Header() {
         >
           전공 강의평
         </NavLink>
-        <NavLink
-          to="/community"
-          className={({ isActive }) => (isActive ? styles.active : "")}
-        >
-          소통바다
-        </NavLink>
       </nav>
 
-      <div className={styles.rightMenu}>
-        <span className={styles.my}>MY</span>
+      <div className={styles.actions}>
         <button type="button" className={styles.iconButton}>
-          <Search size={24} strokeWidth={1.5} />
+          <Search size={24} strokeWidth={1.8} />
         </button>
-        <button type="button" className={styles.iconButton}>
-          <UserRound size={24} strokeWidth={1.5} />
-        </button>
-        <button type="button" className={styles.iconButton}>
-          <Menu size={27} strokeWidth={1.5} />
-        </button>
+        <NavLink to="/my" className={styles.iconButton}>
+          <UserRound size={24} strokeWidth={1.8} />
+        </NavLink>
+        <NavLink to="/login" className={styles.iconButton}>
+          <Lock size={24} strokeWidth={1.8} />
+        </NavLink>
       </div>
     </header>
   );

@@ -1,16 +1,16 @@
 .header {
   position: relative;
   width: 100%;
-  height: 70px;
+  height: 56px;
   display: flex;
   align-items: center;
   padding: 0 7%;
-  background: #9daaf5;
+  background: #fbfbfb;
 }
 
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
   border-radius: 50%;
   cursor: pointer;
@@ -28,7 +28,6 @@
 .nav a {
   color: #263d78;
   font-size: 18px;
-  font-weight: 500;
   text-decoration: none;
 }
 
@@ -40,28 +39,21 @@
   font-weight: 700;
 }
 
-.rightMenu {
-  margin-left: 1152px;
+.actions {
   display: flex;
   align-items: center;
-  gap: 24px;
-  color: #263d78;
-}
-
-.my {
-  margin-right: 2px;
-  font-size: 24px;
-  font-weight: 400;
-  cursor: pointer;
+  gap: 32px;
+  margin-left: auto;
 }
 
 .iconButton {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 0;
   border: none;
   background: transparent;
-  color: #263d78;
+  color: #314675;
+  text-decoration: none;
   cursor: pointer;
 }
