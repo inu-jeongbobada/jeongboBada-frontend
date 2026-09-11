@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 
-import Header from "../components/Header";
-import styles from "./Professor.module.css";
-import logoImg from "../assets/logo.png";
+import Header from "../../components/Header";
+import styles from "./ProfessorMain.module.css";
+import logoImg from "../../assets/logo.png";
 
-function Professor() {
+function ProfessorMain() {
   const navigate = useNavigate();
 
   const [filter, setFilter] = useState("all");
@@ -221,4 +221,4 @@ function Professor() {
   );
 }
 
-export default Professor;
+export default ProfessorMain;

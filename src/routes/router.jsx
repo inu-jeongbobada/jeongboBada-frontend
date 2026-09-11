@@ -5,8 +5,8 @@ import Signup from "../pages/auth/Signup";
 import Login from "../pages/auth/Login";
 import FindPw from "../pages/auth/FindPw";
 import Lab from "../pages/Lab";
-import Professor from "../pages/Professor";
-import ProfessorDetail from "../pages/ProfessorDetail";
+import Professor from "../pages/professor/ProfessorMain";
+import ProfessorDetail from "../pages/professor/ProfessorDetail";
 import Course from "../pages/Course";
 
 function Router() {
