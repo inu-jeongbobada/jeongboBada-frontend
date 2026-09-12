@@ -15,6 +15,9 @@ import {
 import Header from "../components/Header";
 import styles from "./Home.module.css";
 import logoImg from "../assets/logo.png";
+import bookImg from "../assets/book-single.png";
+import fileImg from "../assets/filetext.png";
+import searchImg from "../assets/search.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -123,9 +126,9 @@ function Home() {
                 strokeWidth={2}
               />
 
-              <BookOpen
+              <img
+                src={bookImg}
                 className={`${styles.cardIcon} ${styles.labIcon}`}
-                strokeWidth={1.5}
               />
 
               <div className={styles.shortcutText}>
@@ -147,9 +150,9 @@ function Home() {
                 strokeWidth={2}
               />
 
-              <FileText
+              <img
+                src={fileImg}
                 className={`${styles.cardIcon} ${styles.professorIcon}`}
-                strokeWidth={1.5}
               />
 
               <div className={styles.shortcutText}>
@@ -195,9 +198,9 @@ function Home() {
                 strokeWidth={2}
               />
 
-              <Search
+              <img
+                src={searchImg}
                 className={`${styles.cardIcon} ${styles.lectureIcon}`}
-                strokeWidth={3}
               />
 
               <div className={styles.shortcutText}>

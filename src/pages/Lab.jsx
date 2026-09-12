@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Lab.module.css";
 import Header from "../components/Header";
+import bookImg from "../assets/book.png";
+import chatImg from "../assets/chat.png";
+import graduateImg from "../assets/graduate.png";
 
 function Lab() {
   const navigate = useNavigate();
@@ -18,16 +21,19 @@ function Lab() {
       id: "research",
       title: "연구 분야",
       description: "간단 설명",
+      image: bookImg,
     },
     {
       id: "project",
       title: "주요 연구 / 프로젝트",
       description: "간단 설명",
+      image: chatImg,
     },
     {
       id: "recruit",
       title: "모집 정보",
       description: "간단 설명",
+      image: graduateImg,
     },
   ];
 
@@ -64,7 +70,9 @@ function Lab() {
                 className={styles.card}
                 onClick={() => setMenu(card.id)}
               >
-                <div className={styles.cardImage} />
+                <div className={styles.cardImage}>
+                  <img src={card.image} />
+                </div>
                 <div className={styles.cardText}>
                   <h3>{card.title}</h3>
                   <p>{card.description}</p>
@@ -98,7 +106,9 @@ function Lab() {
                   className={styles.smallCard}
                   onClick={() => setMenu(card.id)}
                 >
-                  <div className={styles.smallCardImage} />
+                  <div className={styles.smallCardImage}>
+                    <img src={card.image} alt="" />
+                  </div>
                   <div className={styles.cardText}>
                     <h3>{card.title}</h3>
                     <p>{card.description}</p>
