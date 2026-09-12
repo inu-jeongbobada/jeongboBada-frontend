@@ -133,26 +133,24 @@
 }
 
 .labIcon {
-  width: 184px;
-  height: 232px;
-  bottom: 48px;
+  width: 70%;
+  height: auto;
+  bottom: 100px;
   left: 20px;
 }
 
 .professorIcon {
-  width: 200px;
-  height: 232px;
-  bottom: 32px;
-  left: 24px;
-  color: rgba(25, 52, 153, 0.6);
+  width: 60%;
+  height: auto;
+  bottom: 50px;
+  left: 50px;
 }
 
 .lectureIcon {
-  width: 200px;
-  height: 200px;
-  top: 40px;
+  width: 75%;
+  height: auto;
+  top: 44px;
   left: 16px;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .gradeIcon {
