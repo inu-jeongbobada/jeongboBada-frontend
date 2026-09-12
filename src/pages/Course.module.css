@@ -5,9 +5,12 @@
 }
 
 .hero {
-  height: 430px;
+  height: 560px;
   background: #ffffff;
-  margin-bottom: 140px;
+  background-image: url("../assets/course-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .heroContent {
@@ -16,32 +19,33 @@
   height: 485px;
   padding: 96px 0 0 96px;
   border-radius: 0 242px 242px 0;
-  background: #f5f7ff;
+  background: rgb(246, 248, 255, 0.35);
+  box-shadow: inset 0 10px 16px rgb(255, 255, 255, 0.4);
   box-sizing: border-box;
 }
 
 .heroTitle {
   margin: 48px 0 0 0;
-  color: #111111;
+  color: #000000;
   font-size: 40px;
   font-weight: 700;
   line-height: 1.25;
 }
 
 .heroTitle span {
-  color: #526cff;
+  color: #4564fa;
   font-size: 64px;
 }
 
 .heroDescription {
   margin: 24px 0 0;
-  color: #333333;
+  color: #000000;
   font-size: 16px;
 }
 
 .lectureSection {
-  padding: 45px 0 80px;
-  background: #f5f7ff;
+  padding: 40px 0 80px;
+  background: rgb(161, 177, 255, 9%);
 }
 
 .lectureContent {
@@ -53,23 +57,8 @@
 .tabList {
   display: flex;
   align-items: center;
-  gap: 56px;
-  margin-bottom: 36px;
-}
-
-.tabButton {
-  padding: 0;
-  border: none;
-  background: transparent;
-  color: #888888;
-  font-size: 24px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.activeTab {
-  color: #111111;
-  font-weight: 700;
+  margin-bottom: 20px;
+  color: #6f6c6c;
 }
 
 .infoCardList {
@@ -93,25 +82,29 @@
 
 .infoCard h2 {
   margin: 0 0 10px;
-  color: #111111;
+  color: #000000;
   font-size: 24px;
 }
 
 .infoCard p {
   margin: 0;
-  color: #888888;
+  color: rgb(0, 0, 0, 0.5);
   font-size: 16px;
   line-height: 1.5;
 }
 
 .moreButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
+  height: 48px;
   padding: 10px 18px;
   border: none;
   border-radius: 32px;
-  background: #526cff;
+  background: #4564fa;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
 }
 
@@ -127,14 +120,19 @@
 .introductionBox {
   width: 1248px;
   height: 264px;
-  margin: 96px auto;
+  margin: 70px auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 0 32px;
   border-radius: 22px;
-  background: #304b31;
   box-sizing: border-box;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/course-intro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .introductionText {
@@ -162,7 +160,7 @@
 }
 
 .noticeSection {
-  padding: 50px 112px 96px 88px;
+  padding: 50px 112px 56px 88px;
   background: #f3f5ff;
 }
 
@@ -172,31 +170,52 @@
 
 .noticeTitle h2 {
   margin: 0 0 8px;
-  color: #111111;
+  color: #000000;
   font-size: 32px;
 }
 
 .noticeTitle h2 span {
-  color: #526cff;
+  color: #4564fa;
   font-size: 48px;
 }
 
 .noticeTitle p {
-  margin: 0;
-  color: #555555;
+  color: rgb(0, 0, 0, 0.8);
   font-size: 16px;
 }
 
+.slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sliderButton {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: rgb(69, 99, 255, 0.5);
+  cursor: pointer;
+}
+
 .noticeList {
-  justify-content: flex-end;
+  flex: 1;
+  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(2, 425px);
-  gap: 20px;
+  grid-template-columns: repeat(3, 324px);
+  gap: 56px;
 }
 
 .noticeCard {
-  height: 177px;
-  padding: 30px 38px;
+  position: relative;
+  height: 256px;
+  margin: 48px 0;
+  padding: 24px 24px;
   border-radius: 26px;
   background: #ffffff;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
@@ -204,27 +223,56 @@
 }
 
 .noticeCard h3 {
-  margin: 0 0 15px;
-  color: #526cff;
+  margin: 0 0 24px;
+  color: #4564fa;
   font-size: 20px;
 }
 
 .noticeCard p {
   margin: 0;
-  color: #777777;
+  color: #6f6c6c;
   font-size: 14px;
   line-height: 1.5;
 }
 
-.noticeEmail {
+.noticeText span {
   display: block;
-  margin-top: 20px;
-  color: #aaaaaa;
+  margin-top: 72px;
+  color: #9d9d9d;
   font-size: 14px;
 }
 
+.noticeIcon {
+  position: absolute;
+  right: 28px;
+  bottom: 16px;
+  color: #4564fa;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 45px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgb(161, 177, 255, 0.41);
+  cursor: pointer;
+}
+
+.activeDot {
+  background: #4564fa;
+}
+
 .footer {
-  margin-top: 120px;
+  margin-top: 96px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -238,12 +286,11 @@
   height: 86px;
   margin-bottom: 36px;
   border-radius: 50%;
-  background: #d8baff;
 }
 
 .footer p {
   margin: 0;
-  color: #777777;
+  color: rgb(0, 0, 0, 0.5);
   font-size: 16px;
   line-height: 1.8;
   text-align: center;
