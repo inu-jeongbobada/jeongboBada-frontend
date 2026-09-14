@@ -38,8 +38,8 @@ function About() {
             <div className={styles.featureCard}>
               <h3>교수님 정보</h3>
               <ul>
-                <li>담당 과목 · 연구 분야 · 연락처 정보 제공</li>
-                <li>수강 후기와 학생들의 의견을 통한 교수 정보 공유</li>
+                <li>담당 과목 · 연구 분야 · 연구실 정보 제공</li>
+                <li>수강 후기와 선배들의 의견을 통한 교수 정보 공유</li>
               </ul>
             </div>
             <div className={styles.featureIcon}>
@@ -51,9 +51,9 @@ function About() {
             <div className={styles.featureCard}>
               <h3>전공 수업 정보</h3>
               <ul>
-                <li>과목별 수업 정보 및 시간표 제공</li>
-                <li>학생들의 강의 평가 및 후기 확인</li>
-                <li>학점 관리와 개인별 강의 정보 제공</li>
+                <li>과목별 수강 후기 및 학습 자료 제공</li>
+                <li>학점별 필터링으로 맞춤형 정보 탐색</li>
+                <li>학과 구성원 기반의 신뢰도 높은 수업 정보 제공</li>
               </ul>
             </div>
             <div className={styles.featureIcon}>
@@ -67,9 +67,9 @@ function About() {
 
               <ul>
                 <li>학과 커뮤니티 · 공지사항</li>
-                <li>학과 활동 · 동아리 안내</li>
-                <li>취업 정보 · 진로 후기</li>
-                <li>학생 · 졸업생간 네트워크 기능</li>
+                <li>학사 일정 · 졸업 요건</li>
+                <li>취업 현황 · 합격 수기</li>
+                <li>알림 · 즐겨찾기 등 개인화 기능</li>
               </ul>
             </div>
             <div className={styles.featureIcon}>
