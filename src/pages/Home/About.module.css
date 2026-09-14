@@ -98,7 +98,7 @@
 }
 
 .featureCard h3 {
-  margin: 0 0 28px;
+  margin: 0 0 20px;
   color: #1c398e;
   font-size: 24px;
 }
@@ -108,7 +108,7 @@
   padding-left: 18px;
   color: #6f6c6c;
   font-size: 12px;
-  line-height: 2;
+  line-height: 2.6;
 }
 
 .featureIcon {
