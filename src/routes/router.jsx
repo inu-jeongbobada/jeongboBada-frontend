@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "../pages/Home";
+import Main from "../pages/Home/Main";
+import About from "../pages/Home/About";
 import Signup from "../pages/auth/Signup";
 import Login from "../pages/auth/Login";
 import FindPw from "../pages/auth/FindPw";
@@ -12,7 +13,8 @@ import Course from "../pages/Course";
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Main />} />
+      <Route path="/about" element={<About />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/find-password" element={<FindPw />} />

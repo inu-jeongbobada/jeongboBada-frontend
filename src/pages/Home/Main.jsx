@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  BookOpen,
-  FileText,
-  Search,
   ExternalLink,
   Bell,
   UserRound,
@@ -12,14 +9,14 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-import Header from "../components/Header";
-import styles from "./Home.module.css";
-import logoImg from "../assets/logo.png";
-import bookImg from "../assets/book-single.png";
-import fileImg from "../assets/filetext.png";
-import searchImg from "../assets/search.png";
+import Header from "../../components/Header";
+import styles from "./Main.module.css";
+import logoImg from "../../assets/logo.png";
+import bookImg from "../../assets/book-single.png";
+import fileImg from "../../assets/filetext.png";
+import searchImg from "../../assets/search.png";
 
-function Home() {
+function Main() {
   const navigate = useNavigate();
 
   const [noticePage, setNoticePage] = useState(0);
@@ -100,7 +97,7 @@ function Home() {
           <button
             type="button"
             className={styles.diveButton}
-            onClick={() => navigate("/community")}
+            onClick={() => navigate("/about")}
           >
             DIVE
           </button>
@@ -291,4 +288,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Main;
