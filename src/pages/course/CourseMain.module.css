@@ -7,7 +7,7 @@
 .hero {
   height: 560px;
   background: #ffffff;
-  background-image: url("../assets/course-bg.png");
+  background-image: url("../../assets/course-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,7 +129,7 @@
   box-sizing: border-box;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/course-intro.png");
+    url("../../assets/course-intro.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
