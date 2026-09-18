@@ -1,9 +1,13 @@
 import Header from "../../components/Header";
 import styles from "./ProfessorDetail.module.css";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { Phone, Mail, MapPin, Clock3, Sparkle } from "lucide-react";
 
 function ProfessorDetail() {
+  const navigate = useNavigate();
+  const { professorId } = useParams();
+
   const courses = [
     {
       id: 1,
@@ -139,7 +143,12 @@ function ProfessorDetail() {
           <div className={styles.reviewBox}>
             <div className={styles.reviewHeader}>
               <h2>수강생 후기</h2>
-              <button type="button">더보기 &gt;</button>
+              <button
+                type="button"
+                onClick={() => navigate(`/professor/${professorId}/review`)}
+              >
+                더보기 &gt;
+              </button>
             </div>
             <div className={styles.reviewSummary}>
               <div className={styles.score}>

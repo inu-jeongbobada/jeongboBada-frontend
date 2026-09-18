@@ -1,0 +1,416 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 64px 136px 90px 136px;
+}
+
+.pageTitle {
+  margin: 0 0 64px;
+  color: #1c398e;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.professorSection {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1.5fr;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.professorInfo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #bdf28d;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileText strong {
+  margin-bottom: 8px;
+  color: #0c174f;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profileText > span {
+  color: #0c174f;
+  font-size: 16px;
+}
+
+.metricList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.metric {
+  display: grid;
+  grid-template-columns: 90px 120px;
+  align-items: center;
+  column-gap: 24px;
+  gap: 12px;
+}
+
+.metricLabel {
+  justify-self: start;
+  padding: 4px 12px;
+  border-radius: 26px;
+  background: #6f6c6c;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.metricLine {
+  position: relative;
+  width: 120px;
+  height: 6px;
+  border-radius: 12px;
+  background: #d9d9d9;
+}
+
+.metricValue {
+  height: 100%;
+  border-radius: inherit;
+  background: #9fa0a0;
+}
+
+.metricMarker {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #2e2e2e;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(
+    50% 0%,
+    58% 42%,
+    100% 50%,
+    58% 58%,
+    50% 100%,
+    42% 58%,
+    0% 50%,
+    42% 42%
+  );
+}
+
+.scoreArea {
+  padding: 0 0 24px 72px;
+  border-left: 2px solid rgb(0, 0, 0, 0.3);
+}
+
+.score {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.score strong {
+  color: #1c398e;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.score span {
+  color: #0c174f;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.stars > div {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  clip-path: polygon(
+    50% 0%,
+    58% 42%,
+    100% 50%,
+    58% 58%,
+    50% 100%,
+    42% 58%,
+    0% 50%,
+    42% 42%
+  );
+}
+
+.activeStar {
+  background-color: #526cff;
+}
+
+.inactiveStar {
+  background-color: #dedede;
+}
+
+.scoreCount {
+  align-self: flex-end;
+  color: #6f6c6c;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.reviewSection {
+  margin-bottom: 80px;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.sortButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.sortButtons button {
+  padding: 4px 10px;
+  border: 1px solid #4564fa;
+  border-radius: 26px;
+  background: #ffffff;
+  color: #4564fa;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sortButtons .activeSort {
+  background: #4564fa;
+  color: #ffffff;
+}
+
+.reviewCount {
+  color: #6f6c6c;
+  font-size: 16px;
+}
+
+.reviewList {
+  height: 290px;
+  padding: 20px 0px 20px 44px;
+  border-radius: 26px;
+  background: #f5f5f5;
+}
+
+.reviewScroll {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-color: #526cff transparent;
+  padding-right: 40px;
+}
+
+.reviewItem {
+  display: grid;
+  grid-template-columns: 40px 45px 1fr 30px;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  min-height: 65px;
+}
+
+.reviewProfile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #bdf28d;
+}
+
+.anonymous {
+  color: #4563ff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.reviewItem p {
+  margin: 0;
+  color: #6f6c6c;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.heartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+
+.likedHeart {
+  color: #4563ff;
+}
+
+.writeSection {
+  width: 100%;
+}
+
+.ratingQuestions {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-bottom: 55px;
+}
+
+.ratingQuestion h3 {
+  margin: 0 0 12px;
+  color: #0c174f;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ratingControl {
+  width: 160px;
+}
+
+.ratingDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 6px;
+  border: 2px solid rgb(0, 0, 0, 0.25);
+  border-radius: 26px;
+  background: #f5f5f5;
+}
+
+.ratingDot {
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #d9d9d9;
+  cursor: pointer;
+}
+
+.ratingDot.selectedDot {
+  background: #4564fa;
+}
+
+.ratingLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  color: #6f6c6c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.anonymousCheck {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  margin: 0 0 30px 30px;
+}
+
+.anonymousCheck input {
+  display: none;
+}
+
+.customCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4564fa;
+  border-radius: 6px;
+  background: #fff;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.customCheckbox.checked {
+  background: #4564fa;
+  color: #ffffff;
+}
+
+.anonymousCheck span {
+  color: #4564fa;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.textareaBox {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 38px;
+}
+
+.textareaBox textarea {
+  width: 100%;
+  height: 100%;
+  padding: 24px 28px 45px;
+  resize: none;
+  border: none;
+  border-radius: 26px;
+  outline: none;
+  background: #f5f5f5;
+  color: #6f6c6c;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+.characterCount {
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  color: #6f6c6c;
+  font-size: 12px;
+}
+
+.submitButton {
+  display: block;
+  width: 715px;
+  height: 42px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 26px;
+  background: #4564fa;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #4564fa;
+  transform: translateY(-1px);
+}

@@ -1,10 +1,24 @@
 import { useState } from "react";
-import Header from "../components/Header";
-import styles from "./Course.module.css";
-import logoImg from "../assets/logo.png";
-import { ChevronLeft, ChevronRight, Mail, Bell, UserRound } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import {
+  ExternalLink,
+  Bell,
+  UserRound,
+  Mail,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
-function Course() {
+import Header from "../../components/Header";
+import styles from "./Home.module.css";
+import logoImg from "../../assets/logo.png";
+import bookImg from "../../assets/book-single.png";
+import fileImg from "../../assets/filetext.png";
+import searchImg from "../../assets/search.png";
+
+function Main() {
+  const navigate = useNavigate();
+
   const [noticePage, setNoticePage] = useState(0);
 
   const notices = [
@@ -72,80 +86,127 @@ function Course() {
       <Header />
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
-            쉽고 빠르게 <span>전공 강의평</span>
-            <br />
-            알아보기
-          </h1>
+          <h1>DIVE INTO INFORMATION</h1>
+          <p className={styles.heroSubTitle}>Discover, Connect, Explore</p>
           <p className={styles.heroDescription}>
-            정보 바다에서 나의 정보를 만나보세요
+            Endless information, countless possibilities.
+            <br />
+            Take a deeper look and find something new.
           </p>
+
+          <button
+            type="button"
+            className={styles.diveButton}
+            onClick={() => navigate("/about")}
+          >
+            DIVE
+          </button>
         </div>
       </section>
 
-      <section className={styles.lectureSection}>
-        <div className={styles.lectureContent}>
-          <div className={styles.tabList}>
-            <h2>메뉴얼</h2>
+      <section id="shortcut" className={styles.shortcutSection}>
+        <div className={styles.container}>
+          <div className={styles.shortcutTitle}>
+            <h2>정보바다에 처음 오셨나요?</h2>
+            <p>학생들이 자주 찾는 서비스예요.</p>
           </div>
-          <div className={styles.infoCardList}>
-            <article className={styles.infoCard}>
-              <div>
-                <h2>강의 정보</h2>
-                <p>
-                  강의의 주요 내용과 수업 관련 정보를
-                  <br />
-                  한눈에 확인할 수 있습니다.
-                </p>
+
+          <div className={styles.shortcutList}>
+            <button
+              type="button"
+              className={styles.shortcutCard}
+              onClick={() => navigate("/lab")}
+            >
+              <ExternalLink
+                className={styles.externalIcon}
+                size={48}
+                strokeWidth={2}
+              />
+
+              <img
+                src={bookImg}
+                className={`${styles.cardIcon} ${styles.labIcon}`}
+              />
+
+              <div className={styles.shortcutText}>
+                <span>
+                  연구실 정보 <br />
+                  바로가기
+                </span>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              className={styles.shortcutCard}
+              onClick={() => navigate("/professor")}
+            >
+              <ExternalLink
+                className={styles.externalIcon}
+                size={48}
+                strokeWidth={2}
+              />
+
+              <img
+                src={fileImg}
+                className={`${styles.cardIcon} ${styles.professorIcon}`}
+              />
+
+              <div className={styles.shortcutText}>
+                <span>
+                  교수 정보 <br />
+                  바로가기
+                </span>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              className={styles.shortcutCard}
+              onClick={() => navigate("/grade")}
+            >
+              <ExternalLink
+                className={styles.externalIcon}
+                size={48}
+                strokeWidth={2}
+              />
+
+              <div className={styles.gradeIcon}>
+                <span className={styles.gradeFour}>4.0</span>
+                <span className={styles.gradeThree}>3.5</span>
               </div>
 
-              <button type="button" className={styles.moreButton}>
-                알아보기
-              </button>
-            </article>
-
-            <article className={styles.infoCard}>
-              <div>
-                <h2>나의 학점 정보</h2>
-                <p>
-                  시험 성적을 차트로 한눈에 확인하고
-                  <br />
-                  과목별 성취도를 비교해 보세요.
-                </p>
+              <div className={styles.shortcutText}>
+                <span>
+                  내 학점 <br />
+                  바로가기
+                </span>
               </div>
+            </button>
 
-              <button type="button" className={styles.moreButton}>
-                확인하기
-              </button>
-            </article>
+            <button
+              type="button"
+              className={styles.shortcutCard}
+              onClick={() => navigate("/course")}
+            >
+              <ExternalLink
+                className={styles.externalIcon}
+                size={48}
+                strokeWidth={2}
+              />
 
-            <article className={styles.infoCard}>
-              <div>
-                <h2>나의 장바구니</h2>
-                <p>
-                  과목 강의 정보와 일정을 확인하며 나에게
-                  <br />
-                  맞는 수강 과목을 계획할 수 있습니다.
-                </p>
+              <img
+                src={searchImg}
+                className={`${styles.cardIcon} ${styles.lectureIcon}`}
+              />
+
+              <div className={styles.shortcutText}>
+                <span>
+                  강의 정보 <br />
+                  바로가기
+                </span>
               </div>
-
-              <button type="button" className={styles.moreButton}>
-                확인하기
-              </button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.introductionSection}>
-        <div className={styles.introductionBox}>
-          <div className={styles.introductionText}>
-            <span>정보바다</span>
-            <h2>
-              정보바다는 학생들에게 필요한 정보를 한곳에 담아,
-              <br />더 편리한 대학생활을 만들어갑니다.
-            </h2>
-            <button type="button">정보바다 소개 바로가기</button>
+            </button>
           </div>
         </div>
       </section>
@@ -227,4 +288,4 @@ function Course() {
   );
 }
 
-export default Course;
+export default Main;

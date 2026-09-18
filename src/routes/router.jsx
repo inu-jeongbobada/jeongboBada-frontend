@@ -1,27 +1,32 @@
 import { Routes, Route } from "react-router-dom";
 
-import Main from "../pages/Home/Main";
-import About from "../pages/Home/About";
+import Home from "../pages/dashboard/Home";
+import About from "../pages/dashboard/About";
 import Signup from "../pages/auth/Signup";
 import Login from "../pages/auth/Login";
 import FindPw from "../pages/auth/FindPw";
-import Lab from "../pages/Lab";
+import LabDetail from "../pages/lab/LabDetail";
 import Professor from "../pages/professor/ProfessorMain";
 import ProfessorDetail from "../pages/professor/ProfessorDetail";
-import Course from "../pages/Course";
+import ProfessorReview from "../pages/professor/ProfessorReview";
+import CourseMain from "../pages/course/CourseMain";
 
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
+      <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/find-password" element={<FindPw />} />
-      <Route path="/lab" element={<Lab />} />
+      <Route path="/lab" element={<LabDetail />} />
       <Route path="/professor" element={<Professor />} />
-      <Route path="/professor/:id" element={<ProfessorDetail />} />
-      <Route path="/course" element={<Course />} />
+      <Route path="/professor/:professorid" element={<ProfessorDetail />} />
+      <Route
+        path="/professor/:professorId/review"
+        element={<ProfessorReview />}
+      />
+      <Route path="/course" element={<CourseMain />} />
     </Routes>
   );
 }

@@ -8,8 +8,6 @@ import logoImg from "../../assets/logo.png";
 
 function ProfessorMain() {
   const navigate = useNavigate();
-
-  const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
 
   // 임시 데이터
