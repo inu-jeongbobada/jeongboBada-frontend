@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./Lab.module.css";
-import Header from "../components/Header";
-import bookImg from "../assets/book.png";
-import chatImg from "../assets/chat.png";
-import graduateImg from "../assets/graduate.png";
+import styles from "./LabDetail.module.css";
+import Header from "../../components/Header";
+import bookImg from "../../assets/book.png";
+import chatImg from "../../assets/chat.png";
+import graduateImg from "../../assets/graduate.png";
 
 function Lab() {
   const navigate = useNavigate();
