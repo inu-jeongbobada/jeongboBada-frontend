@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 
 import Header from "../../components/Header";
-import styles from "./ProfessorMain.module.css";
+import styles from "./ProfessorList.module.css";
 import logoImg from "../../assets/logo.png";
 
-function ProfessorMain() {
+function ProfessorList() {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
 
@@ -17,8 +17,6 @@ function ProfessorMain() {
       id: 1,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -26,8 +24,6 @@ function ProfessorMain() {
       id: 2,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -35,8 +31,6 @@ function ProfessorMain() {
       id: 3,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -44,8 +38,6 @@ function ProfessorMain() {
       id: 4,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -54,8 +46,6 @@ function ProfessorMain() {
       id: 5,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -63,8 +53,6 @@ function ProfessorMain() {
       id: 6,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -72,8 +60,6 @@ function ProfessorMain() {
       id: 7,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -81,8 +67,6 @@ function ProfessorMain() {
       id: 8,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -91,8 +75,6 @@ function ProfessorMain() {
       id: 9,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -100,8 +82,6 @@ function ProfessorMain() {
       id: 10,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -109,8 +89,6 @@ function ProfessorMain() {
       id: 11,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -118,8 +96,6 @@ function ProfessorMain() {
       id: 12,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -128,8 +104,6 @@ function ProfessorMain() {
       id: 13,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -137,8 +111,6 @@ function ProfessorMain() {
       id: 14,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -146,8 +118,6 @@ function ProfessorMain() {
       id: 15,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -155,8 +125,6 @@ function ProfessorMain() {
       id: 16,
       name: "교수명",
       department: "학과명",
-      subject1: "담당 과목",
-      subject2: "담당 과목",
       location: "연구실 위치",
       phone: "전화번호",
     },
@@ -209,9 +177,7 @@ function ProfessorMain() {
             작성되었습니다.
             <br />
             소속 및 연락처는 변경될 수 있으며, 최신 정보는 학교 공식 홈페이지를
-            통해
-            <br />
-            확인하시기 바랍니다.
+            통해 확인하시기 바랍니다.
           </p>
         </footer>
       </main>
@@ -219,4 +185,4 @@ function ProfessorMain() {
   );
 }
 
-export default ProfessorMain;
+export default ProfessorList;
