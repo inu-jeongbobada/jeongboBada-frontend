@@ -9,6 +9,11 @@ body,
   min-height: 100%;
 }
 
+html {
+  /* 고정 헤더(56px)에 가려지지 않도록 앵커 이동 시 여백 확보 */
+  scroll-padding-top: 56px;
+}
+
 body {
   min-width: 320px;
 }
