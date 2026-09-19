@@ -1,0 +1,67 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0, 0.25);
+}
+
+.modal {
+  position: relative;
+  width: min(480px, calc(100% - 48px));
+  padding: 40px 36px 32px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 8px 32px rgb(0, 0, 0, 0.15);
+}
+
+.modal h3 {
+  margin: 0 0 20px;
+  color: #1c398e;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.body {
+  color: #0c174f;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #6f6c6c;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.actions button {
+  min-width: 96px;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid #4564fa;
+  border-radius: 26px;
+  background: #ffffff;
+  color: #4564fa;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.actions button:last-child {
+  background: #4564fa;
+  color: #ffffff;
+}

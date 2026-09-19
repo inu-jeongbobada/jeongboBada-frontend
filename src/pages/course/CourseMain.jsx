@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import styles from "./CourseMain.module.css";
 import logoImg from "../../assets/logo.png";
 import { ChevronLeft, ChevronRight, Mail, Bell, UserRound } from "lucide-react";
 
 function Course() {
+  const navigate = useNavigate();
   const [noticePage, setNoticePage] = useState(0);
 
   const notices = [
@@ -99,7 +101,11 @@ function Course() {
                 </p>
               </div>
 
-              <button type="button" className={styles.moreButton}>
+              <button
+                type="button"
+                className={styles.moreButton}
+                onClick={() => navigate("/course/lectures")}
+              >
                 알아보기
               </button>
             </article>
@@ -114,7 +120,11 @@ function Course() {
                 </p>
               </div>
 
-              <button type="button" className={styles.moreButton}>
+              <button
+                type="button"
+                className={styles.moreButton}
+                onClick={() => navigate("/grade")}
+              >
                 확인하기
               </button>
             </article>
@@ -129,7 +139,11 @@ function Course() {
                 </p>
               </div>
 
-              <button type="button" className={styles.moreButton}>
+              <button
+                type="button"
+                className={styles.moreButton}
+                onClick={() => navigate("/course/cart")}
+              >
                 확인하기
               </button>
             </article>

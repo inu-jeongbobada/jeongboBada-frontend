@@ -1,0 +1,232 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.main {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 90px 40px 80px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 448px 1fr;
+  align-items: start;
+  gap: 156px;
+  margin-bottom: 56px;
+}
+
+.profileCard {
+  padding: 28px 38px 30px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgb(0, 0, 0, 0.15);
+}
+
+.profileCard > p {
+  margin: 0 0 4px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.profileCard h2 {
+  margin: 0 0 8px;
+  color: #000000;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.profileMeta {
+  display: flex;
+  margin: 0 0 18px 60px;
+  color: #6f6c6c;
+  font-size: 15px;
+}
+
+.profileMeta span + span {
+  margin-left: 14px;
+  padding-left: 14px;
+  border-left: 1px solid #6f6c6c;
+}
+
+.gpaList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 24px 0 0 4px;
+}
+
+.gpaList div {
+  display: flex;
+  gap: 40px;
+}
+
+.gpaList dt {
+  min-width: 108px;
+  color: #6f6c6c;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.gpaList dd {
+  margin: 0;
+  color: #4564fa;
+  font-size: 15px;
+}
+
+.requirementCard {
+  padding: 28px 48px 34px;
+  border-radius: 40px;
+  background: #f5f5f5;
+}
+
+.requirementTitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.requirementTitle h2 {
+  margin: 0;
+  color: #1c398e;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.requirementTitle button {
+  display: flex;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #4564fa;
+  cursor: pointer;
+}
+
+.requirementBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.requirementList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.requirementList div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.requirementList dt {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.requirementList dd {
+  margin: 0;
+  color: #4564fa;
+  font-size: 16px;
+}
+
+.chartTitle {
+  margin: 0 0 24px 38px;
+  color: #6f6c6c;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 28px 24px 24px;
+  border-radius: 40px;
+  background: #f5f5f5;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.groupHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: #0c174f;
+  font-size: 14px;
+}
+
+.groupHeader strong {
+  font-weight: 700;
+}
+
+.groupHeader span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bars {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.barItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barTerm {
+  color: #4564fa;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.barValue {
+  margin-bottom: 4px;
+  color: #6f6c6c;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.bar {
+  width: 76px;
+  background: linear-gradient(#4564fa 60%, rgb(69, 100, 250, 0.15));
+  box-shadow: 0 6px 10px rgb(69, 100, 250, 0.35);
+}
+
+.emptyBar {
+  background: linear-gradient(#b8b8b8 60%, rgb(184, 184, 184, 0.3));
+  box-shadow: 0 6px 10px rgb(0, 0, 0, 0.15);
+}
+
+.barLabel {
+  margin-top: 12px;
+  color: #a1b1ff;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.infoList {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.infoList li + li {
+  margin-top: 8px;
+}
