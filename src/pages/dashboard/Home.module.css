@@ -95,6 +95,11 @@
   gap: 64px;
 }
 
+.shortcutItem {
+  transform: perspective(1000px) rotateY(var(--rotate, 0deg));
+  will-change: transform;
+}
+
 .shortcutCard {
   position: relative;
   width: 264px;

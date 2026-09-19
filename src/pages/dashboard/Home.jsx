@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   ExternalLink,
@@ -16,10 +16,60 @@ import bookImg from "../../assets/book-single.png";
 import fileImg from "../../assets/filetext.png";
 import searchImg from "../../assets/search.png";
 
+// 카드마다 회전 시작 시점을 어긋나게 하는 정도 (0~1 진행도 기준)
+const CARD_STAGGER = 0.15;
+
 function Main() {
   const navigate = useNavigate();
+  const shortcutListRef = useRef(null);
 
   const [noticePage, setNoticePage] = useState(0);
+
+  // 스크롤 위치에 맞춰 바로가기 카드를 0~360도 회전
+  useEffect(() => {
+    const list = shortcutListRef.current;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (!list || reduceMotion) return;
+
+    const cards = Array.from(list.children);
+    const totalProgress = 1 + (cards.length - 1) * CARD_STAGGER;
+    let frame = 0;
+
+    const updateRotation = () => {
+      frame = 0;
+      const { innerHeight } = window;
+      const { top } = list.getBoundingClientRect();
+      const progress = Math.min(
+        1,
+        Math.max(0, (innerHeight * 0.9 - top) / (innerHeight * 0.5)),
+      );
+
+      cards.forEach((card, index) => {
+        const cardProgress = Math.min(
+          1,
+          Math.max(0, progress * totalProgress - index * CARD_STAGGER),
+        );
+        card.style.setProperty("--rotate", `${cardProgress * 360}deg`);
+      });
+    };
+
+    const requestUpdate = () => {
+      if (!frame) frame = requestAnimationFrame(updateRotation);
+    };
+
+    updateRotation();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+    };
+  }, []);
 
   const notices = [
     {
@@ -111,102 +161,110 @@ function Main() {
             <p>학생들이 자주 찾는 서비스예요.</p>
           </div>
 
-          <div className={styles.shortcutList}>
-            <button
-              type="button"
-              className={styles.shortcutCard}
-              onClick={() => navigate("/lab")}
-            >
-              <ExternalLink
-                className={styles.externalIcon}
-                size={48}
-                strokeWidth={2}
-              />
+          <div className={styles.shortcutList} ref={shortcutListRef}>
+            <div className={styles.shortcutItem}>
+              <button
+                type="button"
+                className={styles.shortcutCard}
+                onClick={() => navigate("/lab")}
+              >
+                <ExternalLink
+                  className={styles.externalIcon}
+                  size={48}
+                  strokeWidth={2}
+                />
 
-              <img
-                src={bookImg}
-                className={`${styles.cardIcon} ${styles.labIcon}`}
-              />
+                <img
+                  src={bookImg}
+                  className={`${styles.cardIcon} ${styles.labIcon}`}
+                />
 
-              <div className={styles.shortcutText}>
-                <span>
-                  연구실 정보 <br />
-                  바로가기
-                </span>
-              </div>
-            </button>
+                <div className={styles.shortcutText}>
+                  <span>
+                    연구실 정보 <br />
+                    바로가기
+                  </span>
+                </div>
+              </button>
+            </div>
 
-            <button
-              type="button"
-              className={styles.shortcutCard}
-              onClick={() => navigate("/professor")}
-            >
-              <ExternalLink
-                className={styles.externalIcon}
-                size={48}
-                strokeWidth={2}
-              />
+            <div className={styles.shortcutItem}>
+              <button
+                type="button"
+                className={styles.shortcutCard}
+                onClick={() => navigate("/professor")}
+              >
+                <ExternalLink
+                  className={styles.externalIcon}
+                  size={48}
+                  strokeWidth={2}
+                />
 
-              <img
-                src={fileImg}
-                className={`${styles.cardIcon} ${styles.professorIcon}`}
-              />
+                <img
+                  src={fileImg}
+                  className={`${styles.cardIcon} ${styles.professorIcon}`}
+                />
 
-              <div className={styles.shortcutText}>
-                <span>
-                  교수 정보 <br />
-                  바로가기
-                </span>
-              </div>
-            </button>
+                <div className={styles.shortcutText}>
+                  <span>
+                    교수 정보 <br />
+                    바로가기
+                  </span>
+                </div>
+              </button>
+            </div>
 
-            <button
-              type="button"
-              className={styles.shortcutCard}
-              onClick={() => navigate("/grade")}
-            >
-              <ExternalLink
-                className={styles.externalIcon}
-                size={48}
-                strokeWidth={2}
-              />
+            <div className={styles.shortcutItem}>
+              <button
+                type="button"
+                className={styles.shortcutCard}
+                onClick={() => navigate("/grade")}
+              >
+                <ExternalLink
+                  className={styles.externalIcon}
+                  size={48}
+                  strokeWidth={2}
+                />
 
-              <div className={styles.gradeIcon}>
-                <span className={styles.gradeFour}>4.0</span>
-                <span className={styles.gradeThree}>3.5</span>
-              </div>
+                <div className={styles.gradeIcon}>
+                  <span className={styles.gradeFour}>4.0</span>
+                  <span className={styles.gradeThree}>3.5</span>
+                </div>
 
-              <div className={styles.shortcutText}>
-                <span>
-                  내 학점 <br />
-                  바로가기
-                </span>
-              </div>
-            </button>
+                <div className={styles.shortcutText}>
+                  <span>
+                    내 학점 <br />
+                    바로가기
+                  </span>
+                </div>
+              </button>
+            </div>
 
-            <button
-              type="button"
-              className={styles.shortcutCard}
-              onClick={() => navigate("/course")}
-            >
-              <ExternalLink
-                className={styles.externalIcon}
-                size={48}
-                strokeWidth={2}
-              />
+            <div className={styles.shortcutItem}>
+              <button
+                type="button"
+                className={styles.shortcutCard}
+                onClick={() => navigate("/course")}
+              >
+                <ExternalLink
+                  className={styles.externalIcon}
+                  size={48}
+                  strokeWidth={2}
+                />
 
-              <img
-                src={searchImg}
-                className={`${styles.cardIcon} ${styles.lectureIcon}`}
-              />
+                <img
+                  src={searchImg}
+                  className={`${styles.cardIcon} ${styles.lectureIcon}`}
+                />
 
-              <div className={styles.shortcutText}>
-                <span>
-                  강의 정보 <br />
-                  바로가기
-                </span>
-              </div>
-            </button>
+                <div className={styles.shortcutText}>
+                  <span>
+                    강의 정보 <br />
+                    바로가기
+                  </span>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </section>
