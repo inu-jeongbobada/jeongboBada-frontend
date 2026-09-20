@@ -1,0 +1,401 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 236px 1fr;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  align-self: start;
+  min-height: 560px;
+  padding: 48px 0 48px 64px;
+  border-radius: 0 0 26px 0;
+  background: #f5f5f5;
+}
+
+.sidebar h2 {
+  margin: 0 0 28px;
+  color: #6f6c6c;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.sidebar button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #6f6c6c;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  color: #4564fa;
+}
+
+.content {
+  padding: 70px 100px 80px 56px;
+}
+
+.hello {
+  margin: 0 0 4px;
+  color: #4564fa;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0 0 28px;
+  color: #1c398e;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.profileCard {
+  display: grid;
+  grid-template-columns: 170px 1fr 300px;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 24px 24px 32px;
+  border: 2px solid #000000;
+  border-radius: 26px;
+}
+
+.avatarWrap {
+  position: relative;
+  width: 132px;
+  height: 132px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #e5c2ff center / cover no-repeat;
+}
+
+.cameraButton {
+  position: absolute;
+  right: -6px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #1c398e;
+  cursor: pointer;
+}
+
+.profileInfo strong {
+  display: block;
+  margin-bottom: 14px;
+  color: #000000;
+  font-size: 15px;
+}
+
+.profileInfo p {
+  display: flex;
+  margin: 0 0 22px;
+  color: #000000;
+  font-size: 12px;
+}
+
+.profileInfo p span + span {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #000000;
+}
+
+.profileInfo button {
+  height: 30px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 26px;
+  background: #4564fa;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.profileCredit dl {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0 0 12px;
+}
+
+.profileCredit dl div {
+  display: flex;
+  gap: 16px;
+}
+
+.profileCredit dt {
+  min-width: 130px;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.profileCredit dd {
+  margin: 0;
+  color: #4564fa;
+  font-size: 12px;
+}
+
+.section {
+  padding-top: 48px;
+}
+
+.section h2 {
+  margin: 0 0 20px;
+  color: #1c398e;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.linkText {
+  margin: 0 0 12px 12px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #a1b1ff;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.cartTable {
+  width: calc(100% - 24px);
+  margin-left: 12px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 26px;
+  background: #f5f5f5;
+  color: #000000;
+  font-size: 11px;
+  text-align: center;
+}
+
+.cartTable th {
+  padding: 18px 8px 10px;
+  font-weight: 700;
+}
+
+.cartTable td {
+  padding: 10px 8px;
+}
+
+.cartTable thead tr {
+  position: relative;
+}
+
+.cartTable thead th {
+  border-bottom: 1px solid #4564fa;
+}
+
+.cartTable tbody tr:last-child td {
+  padding-bottom: 20px;
+}
+
+.emptyCell {
+  padding: 24px 8px;
+  color: #6f6c6c;
+}
+
+.pillButton {
+  display: block;
+  height: 26px;
+  margin: 28px 12px 0 auto;
+  padding: 0 14px;
+  border: none;
+  border-radius: 26px;
+  background: #4564fa;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.gradeSummary {
+  display: flex;
+  gap: 24px;
+  margin: 0 0 20px 12px;
+  color: #000000;
+  font-size: 11px;
+}
+
+.gradeSummary em {
+  margin-left: 6px;
+  color: #4564fa;
+  font-style: normal;
+}
+
+.gradeBox {
+  width: 470px;
+  max-width: calc(100% - 24px);
+  margin-left: 12px;
+  overflow: hidden;
+  border: 1px solid #b8b8b8;
+  border-radius: 20px;
+}
+
+.gradeTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  text-align: center;
+}
+
+.gradeTable th {
+  padding: 8px;
+  background: #f0f0f0;
+  color: #000000;
+  font-weight: 700;
+}
+
+.gradeTable td {
+  height: 36px;
+  border-top: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+}
+
+.gradeTable td:first-child {
+  border-left: none;
+}
+
+.gradeTable input[type="text"],
+.gradeTable input[type="number"],
+.gradeTable select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #000000;
+  font-family: inherit;
+  font-size: 11px;
+  text-align: center;
+}
+
+.gradeTable input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #4564fa;
+  cursor: pointer;
+}
+
+.gradeActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.gradeActions button {
+  padding: 4px 14px;
+  border: none;
+  border-radius: 26px;
+  background: transparent;
+  color: #000000;
+  font-family: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.gradeActions button:first-child {
+  background: #4564fa;
+  color: #ffffff;
+}
+
+.gradeButton {
+  width: fit-content;
+  margin: 24px 0 0 12px;
+  margin-left: calc(12px + 470px - 90px);
+}
+
+.reviewSection {
+  padding: 48px 0 56px;
+  background: #f5f6ff;
+}
+
+.reviewInner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-areas: "title cards";
+  gap: 40px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 100px 0 292px;
+}
+
+.reviewInner h2 {
+  grid-area: title;
+  margin: 0;
+  color: #1c398e;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.reviewCards {
+  grid-area: cards;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviewCards article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 26px;
+  border-radius: 20px;
+  background: #a1b1ff;
+  color: #ffffff;
+}
+
+.reviewCards h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.reviewCards p {
+  margin: 0;
+  font-size: 10px;
+}
+
+.reviewCards button {
+  height: 28px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 26px;
+  background: #4564fa;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 11px;
+  white-space: nowrap;
+  cursor: pointer;
+}

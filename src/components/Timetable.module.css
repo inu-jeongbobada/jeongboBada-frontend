@@ -1,0 +1,82 @@
+.timetable {
+  --row-height: 63px;
+  --time-width: 64px;
+  width: 100%;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: var(--time-width) repeat(5, 1fr);
+  height: 52px;
+  align-items: end;
+  padding-bottom: 8px;
+}
+
+.head span {
+  color: #0c174f;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: var(--time-width) 1fr;
+  border-top: 1px solid #000000;
+}
+
+.times {
+  display: grid;
+  grid-template-rows: repeat(9, var(--row-height));
+}
+
+.times span {
+  padding-right: 4px;
+  color: #0c174f;
+  font-size: 12px;
+  text-align: right;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(9, var(--row-height));
+  border-left: 1px solid #000000;
+}
+
+.cell {
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.grid .cell:nth-child(5n) {
+  border-right: none;
+}
+
+.grid .cell:nth-last-child(-n + 5) {
+  border-bottom: none;
+}
+
+.block {
+  position: absolute;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 4px;
+  overflow: hidden;
+  background: #4564fa;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.block strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.block span {
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 10px;
+}

@@ -1,0 +1,22 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.switcher h1 {
+  margin: 0;
+  color: #0c174f;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.switcher button {
+  display: flex;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #0c174f;
+  cursor: pointer;
+}

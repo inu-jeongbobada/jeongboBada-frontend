@@ -1,0 +1,192 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 130px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 100px 40px 60px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cartPanel {
+  height: 630px;
+  overflow: hidden;
+  border-radius: 38px;
+  background: #f5f5f5;
+}
+
+.cartHeader {
+  position: relative;
+  height: 185px;
+  padding: 38px 34px 0;
+}
+
+.cartHeader h2 {
+  margin: 0 0 30px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cartHeader p {
+  margin: 0;
+  color: #6f6c6c;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.cartIcon {
+  position: absolute;
+  top: 34px;
+  right: 36px;
+  color: #cdd3fb;
+}
+
+.cartList {
+  height: calc(100% - 185px);
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  scrollbar-color: #4564fa transparent;
+}
+
+.cartItem,
+.emptyItem {
+  position: relative;
+  min-height: 106px;
+  border-bottom: 2px solid #000000;
+  opacity: 1;
+}
+
+.cartItem {
+  border-top: none;
+  background: #f5f5f5;
+}
+
+.emptyItem {
+  border-bottom-color: rgb(0, 0, 0, 0.35);
+}
+
+.itemBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-height: 106px;
+  padding: 12px 12px;
+  border: none;
+  background: transparent;
+  color: #0c174f;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.itemTop {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.itemTop strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.itemTop span {
+  color: #6f6c6c;
+  font-size: 11px;
+}
+
+.professor {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.meta {
+  margin-top: auto;
+  color: #6f6c6c;
+  font-size: 11px;
+}
+
+.selected {
+  background: #4564fa;
+}
+
+.selected .itemBody,
+.selected .itemTop span,
+.selected .meta {
+  color: #ffffff;
+}
+
+.removeButton {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  height: 34px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 26px;
+  background: #ffffff;
+  color: #4564fa;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-left: 12px;
+}
+
+.timetableButton {
+  height: 34px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 26px;
+  background: #4564fa;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  color: #6f6c6c;
+  font-size: 11px;
+}
+
+.notice svg {
+  color: #4564fa;
+}
+
+.searchPanel {
+  height: 683px;
+  overflow: hidden;
+  border-radius: 38px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.15);
+}
+
+.searchPanel button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

@@ -1,0 +1,27 @@
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  display: block;
+  flex-shrink: 0;
+  clip-path: polygon(
+    50% 0%,
+    58% 42%,
+    100% 50%,
+    58% 58%,
+    50% 100%,
+    42% 58%,
+    0% 50%,
+    42% 42%
+  );
+}
+
+.starButton {
+  display: flex;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

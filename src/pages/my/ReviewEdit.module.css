@@ -1,0 +1,40 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 48px 118px 70px;
+}
+
+.pageTitle {
+  margin: 0 0 40px;
+  color: #1c398e;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.notFound {
+  margin: 0 0 20px;
+  color: #6f6c6c;
+}
+
+.target {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.target strong {
+  color: #0c174f;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.target span {
+  color: #0c174f;
+  font-size: 14px;
+}
