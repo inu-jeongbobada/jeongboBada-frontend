@@ -16,9 +16,8 @@
 .profileImage {
   transform: translateX(-280px);
   width: 140px;
-  height: 140px;
+  height: auto;
   margin-bottom: 60px;
-  border-radius: 50%;
 }
 
 .signupForm {

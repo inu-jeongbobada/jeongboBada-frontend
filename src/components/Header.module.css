@@ -10,9 +10,8 @@
 
 .logo {
   width: 36px;
-  height: 36px;
+  height: auto;
   flex-shrink: 0;
-  border-radius: 50%;
   cursor: pointer;
 }
 
