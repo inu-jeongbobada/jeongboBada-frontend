@@ -22,13 +22,13 @@ function Header() {
           홈
         </NavLink>
         <NavLink
-          to="/lab"
+          to="/lab/list"
           className={({ isActive }) => (isActive ? styles.active : "")}
         >
           연구실
         </NavLink>
         <NavLink
-          to="/professor"
+          to="/professor/list"
           className={({ isActive }) => (isActive ? styles.active : "")}
         >
           교수님 정보

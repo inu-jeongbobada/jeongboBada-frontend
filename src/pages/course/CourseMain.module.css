@@ -283,9 +283,8 @@
 
 .footerLogo {
   width: 86px;
-  height: 86px;
+  height: auto;
   margin-bottom: 36px;
-  border-radius: 50%;
 }
 
 .footer p {

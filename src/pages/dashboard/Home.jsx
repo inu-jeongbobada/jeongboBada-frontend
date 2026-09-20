@@ -115,7 +115,7 @@ function Main() {
             <button
               type="button"
               className={styles.shortcutCard}
-              onClick={() => navigate("/lab")}
+              onClick={() => navigate("/lab/list")}
             >
               <ExternalLink
                 className={styles.externalIcon}
@@ -139,7 +139,7 @@ function Main() {
             <button
               type="button"
               className={styles.shortcutCard}
-              onClick={() => navigate("/professor")}
+              onClick={() => navigate("/professor/list")}
             >
               <ExternalLink
                 className={styles.externalIcon}
