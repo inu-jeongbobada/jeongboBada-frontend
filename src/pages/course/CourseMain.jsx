@@ -4,8 +4,9 @@ import styles from "./CourseMain.module.css";
 import logoImg from "../../assets/logo.png";
 import { ChevronLeft, ChevronRight, Mail, Bell, UserRound } from "lucide-react";
 
-function Course() {
+function CourseMain() {
   const [noticePage, setNoticePage] = useState(0);
+  const [slideDirection, setSlideDirection] = useState(null);
 
   const notices = [
     {
@@ -55,16 +56,29 @@ function Course() {
   const visibleNotices = notices.slice(noticePage * 3, noticePage * 3 + 3);
   const totalNoticePages = Math.ceil(notices.length / 3);
 
+  const slideClass = {
+    next: styles.slideNext,
+    prev: styles.slidePrev,
+  }[slideDirection];
+
   const handlePreviousNotice = () => {
+    setSlideDirection("prev");
     setNoticePage((current) =>
       current === 0 ? totalNoticePages - 1 : current - 1,
     );
   };
 
   const handleNextNotice = () => {
+    setSlideDirection("next");
     setNoticePage((current) =>
       current === totalNoticePages - 1 ? 0 : current + 1,
     );
+  };
+
+  const handleSelectNotice = (index) => {
+    if (index === noticePage) return;
+    setSlideDirection(index > noticePage ? "next" : "prev");
+    setNoticePage(index);
   };
 
   return (
@@ -168,7 +182,10 @@ function Course() {
               <ChevronLeft size={56} strokeWidth={2.3} />
             </button>
 
-            <div className={styles.noticeList}>
+            <div
+              key={noticePage}
+              className={`${styles.noticeList} ${slideClass ?? ""}`}
+            >
               {visibleNotices.map((notice) => {
                 const Icon = notice.icon;
                 return (
@@ -207,7 +224,7 @@ function Course() {
                     ? `${styles.dot} ${styles.activeDot}`
                     : styles.dot
                 }
-                onClick={() => setNoticePage(index)}
+                onClick={() => handleSelectNotice(index)}
               />
             ))}
           </div>
@@ -227,4 +244,4 @@ function Course() {
   );
 }
 
-export default Course;
+export default CourseMain;
