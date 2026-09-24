@@ -1,3 +1,5 @@
+import { signup, checkNickname } from "../../api/auth";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Check, X, Info } from "lucide-react";
@@ -25,14 +27,29 @@ function Signup() {
     setNicknameStatus(null); // 닉네임 수정 -> 다시 중복 확인
   };
 
-  const handleNicknameCheck = () => {
+  const handleNicknameCheck = async () => {
     if (!nickname.trim()) {
+      alert("닉네임을 입력해주세요.");
       return;
     }
 
-    // TODO: 닉네임 중복 확인 API 연결
-    // 현재는 UI 확인을 위해 임시로 사용 가능 처리
-    setNicknameStatus("available");
+    try {
+      const response = await checkNickname(nickname.trim());
+
+      if (response.data.available) {
+        setNicknameStatus("available");
+      } else {
+        setNicknameStatus("duplicate");
+      }
+    } catch (error) {
+      console.error("닉네임 중복 확인 실패:", error);
+
+      const message =
+        error.response?.data?.message ||
+        "닉네임 중복 확인 중 오류가 발생했습니다.";
+
+      alert(message);
+    }
   };
 
   const handleFileChange = (e) => {
@@ -43,24 +60,37 @@ function Signup() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (nicknameStatus !== "duplicate") {
+    if (nicknameStatus !== "available") {
       alert("닉네임 중복 확인을 해주세요.");
       return;
     }
 
-    // TODO: 회원가입 API 연결
-    console.log({
-      nickname,
-      email,
-      studentId,
-      password,
-      file,
-    });
+    if (!nickname || !email || !studentId || !password) {
+      alert("모든 항목을 입력해주세요.");
+      return;
+    }
 
-    navigate("/login");
+    try {
+      const data = await signup({
+        studentId,
+        password,
+        nickname,
+        email,
+      });
+
+      alert("회원가입이 완료되었습니다.");
+      navigate("/login");
+    } catch (error) {
+      console.error("회원가입 실패:", error);
+
+      const message =
+        error.response?.data?.message || "회원가입 중 오류가 발생하였습니다.";
+
+      alert(message);
+    }
   };
 
   return (

@@ -1,3 +1,5 @@
+import { login } from "../../api/auth";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,12 +11,34 @@ function Login() {
   const [studentId, setStudentId] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // TODO : 로그인 API 연결
-    console.log("학번:", studentId);
-    console.log("비밀번호:", password);
+    if (!studentId || !password) {
+      alert("학번과 비밀번호를 입력해주세요.");
+      return;
+    }
+
+    try {
+      const response = await login({
+        studentId,
+        password,
+      });
+
+      const { accessToken, refreshToken } = response.data;
+
+      localStorage.setItem("accessToken", accessToken);
+      localStorage.setItem("refreshToken", refreshToken);
+
+      navigate("/");
+    } catch (error) {
+      console.error("로그인 실패:", error);
+
+      const message =
+        error.response?.data?.message || "로그인에 실패하였습니다.";
+
+      alert(message);
+    }
   };
 
   return (

@@ -231,7 +231,7 @@ function Main() {
             <h2>
               <span>새로운 공지</span>를 확인하세요
             </h2>
-            <p>정보바다의 새로운 소식과 주요 안내사항을 한눈에 확인하세요</p>
+            <p>정보바다의 새로운 소식과 주요 안내사항을 한눈에 확인하세요.</p>
           </div>
 
           <div className={styles.slider}>
