@@ -11,6 +11,7 @@ import ProfessorList from "../pages/professor/ProfessorList";
 import ProfessorDetail from "../pages/professor/ProfessorDetail";
 import ProfessorReview from "../pages/professor/ProfessorReview";
 import CourseMain from "../pages/course/CourseMain";
+import AdminRoutes from "../pages/admin/AdminRoutes";
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function Router() {
         element={<ProfessorReview />}
       />
       <Route path="/course" element={<CourseMain />} />
+      <Route path="/admin/*" element={<AdminRoutes />} />
     </Routes>
   );
 }

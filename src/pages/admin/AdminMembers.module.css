@@ -1,0 +1,368 @@
+.page {
+  max-width: 1280px;
+}
+
+.code {
+  margin: 0;
+  font-size: 12px;
+  color: #595959;
+}
+
+.title {
+  margin: 4px 0 24px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* 필터 */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldLabel {
+  font-size: 12px;
+  color: #595959;
+}
+
+.input {
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+  color: #222;
+}
+
+.input::placeholder {
+  color: #8a8a8a;
+}
+
+.input:focus,
+.select:focus {
+  outline: 2px solid #333;
+  outline-offset: -1px;
+}
+
+.searchInput {
+  width: 280px;
+}
+
+.selectWrap {
+  position: relative;
+}
+
+.select {
+  width: 150px;
+  height: 36px;
+  padding: 0 32px 0 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+  color: #222;
+  appearance: none;
+  cursor: pointer;
+}
+
+.selectIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #4a4a4a;
+  pointer-events: none;
+}
+
+.primaryButton,
+.secondaryButton {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.primaryButton {
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+}
+
+.secondaryButton {
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  color: #222;
+}
+
+.secondaryButton:hover {
+  background: #f0f0f0;
+}
+
+/* 본문 2단 */
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(380px, 2fr);
+  align-items: start;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* 회원 표 */
+.tableCard {
+  overflow-x: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.table th,
+.table td {
+  height: 48px;
+  padding: 0 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.table th {
+  height: 44px;
+  font-weight: 400;
+  color: #4a4a4a;
+  background: #fafafa;
+}
+
+.table tbody tr {
+  cursor: pointer;
+}
+
+.table tbody tr:hover {
+  background: #f7f7f7;
+}
+
+.table tbody tr:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: -2px;
+}
+
+.table tbody tr.selectedRow {
+  background: #efefef;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.empty {
+  text-align: center !important;
+  color: #8a8a8a;
+  cursor: default;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border: 1px solid #8a8a8a;
+  border-radius: 11px;
+  background: #fff;
+  font-size: 12px;
+  color: #333;
+}
+
+/* 상세 패널 */
+.panel {
+  padding: 24px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.panelEmpty {
+  margin: 40px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  row-gap: 12px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.info dt {
+  color: #595959;
+}
+
+.info dd {
+  margin: 0;
+  color: #222;
+}
+
+.sanction {
+  display: block;
+}
+
+.sanction + .sanction {
+  margin-top: 4px;
+}
+
+.divider {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.sectionTitle {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.outlineButton {
+  height: 36px;
+  border: 1px solid #8a8a8a;
+  border-radius: 4px;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+  color: #222;
+  cursor: pointer;
+}
+
+.outlineButton:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.outlineButton:disabled {
+  border-color: #d0d0d0;
+  color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+/* 이용 정지 */
+.suspend {
+  margin: 0;
+}
+
+.suspendFieldset {
+  margin: 0;
+  padding: 12px 14px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+}
+
+.suspendLegend {
+  padding: 0 4px;
+  font-size: 14px;
+  color: #222;
+}
+
+.periods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.period,
+.periodActive {
+  height: 36px;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.period {
+  border: 1px solid #8a8a8a;
+  background: #fff;
+  color: #222;
+}
+
+.periodActive {
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+}
+
+.reasonField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.submitButton {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 4px;
+  background: #333;
+  font: inherit;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submitButton:disabled,
+.suspendFieldset:disabled .period,
+.suspendFieldset:disabled .periodActive {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #595959;
+}
